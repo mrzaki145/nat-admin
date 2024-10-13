@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAT</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+
+  <body class="login-bg">
+    <div id="app">
+      <div class="container flex min-h-dvh py-10 lg:py-20">
+        <div class="flex-1 max-lg:hidden">
+          <img
+            src="./assets/images/login-img.png"
+            class="w-full mx-auto"
+            alt=""
+          />
+        </div>
+
+        <div class="flex-1 flex flex-col items-start">
+          <img
+            src="./assets/images/logo-aum-sm.svg"
+            class="ms-auto max-lg:me-auto h-14 lg:h-16"
+            alt=""
+          />
+
+          <div
+            class="flex-1 w-full max-w-lg mx-auto flex flex-col justify-center"
+          >
+            <header class="text-center mb-10">
+              <h1 class="mb-1 text-2xl lg:text-3xl font-semibold">
+                Admin Login
+              </h1>
+              <p class="text-lg lg:text-xl">Enter your credential to log in.</p>
+            </header>
+
+            <form>
+              <div class="form__group">
+                <div class="form__field">
+                  <label class="form__label" for="email">Email</label>
+                  <div class="form__control">
+                    <svg>
+                      <use href="./assets/images/sprite.svg#mail"></use>
+                    </svg>
+                    <input
+                      id="email"
+                      type="email"
+                      class="form__input"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="password">Password</label>
+                  <div class="form__control">
+                    <svg>
+                      <use href="./assets/images/sprite.svg#lock"></use>
+                    </svg>
+                    <input
+                      id="password"
+                      type="password"
+                      class="form__input"
+                      placeholder="Enter your Password"
+                    />
+
+                    <button
+                      type="button"
+                      data-hs-toggle-password='{
+                        "target": "#password"
+                      }'
+                      class="absolute end-4"
+                    >
+                      <svg>
+                        <use href="./assets/images/sprite.svg#eye"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-end gap-4">
+                  <a href="#" class="text-primary font-semibold hover:underline"
+                    >Forgot Password?</a
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full mt-12">
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+  </body>
+</html>

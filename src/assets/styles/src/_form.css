@@ -1,0 +1,44 @@
+.form__group {
+  @apply space-y-4;
+}
+
+.form__row {
+  @apply flex flex-col lg:flex-row gap-4;
+}
+
+.form__field {
+  @apply w-full;
+}
+
+.form__label {
+  @apply mb-2 ps-4 inline-block lg:text-lg;
+}
+
+.form__control {
+  @apply relative flex items-center gap-2 bg-white h-14 px-4 lg:px-6 rounded focus-within:border-primary transition-colors border border-white;
+}
+
+.form__control svg {
+  @apply size-6 text-primary;
+}
+
+.form__input {
+  @apply w-full appearance-none focus:outline-none placeholder:text-primary/50 bg-white;
+}
+select.form__input {
+  @apply appearance-none;
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="%23151E3F"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.5em 1.5em;
+}
+
+.form__checkbox {
+  @apply flex items-center gap-2 select-none;
+}
+.form__checkbox input {
+  @apply size-6 accent-blue;
+}
+.form__checkbox input.sm {
+  @apply size-4 accent-blue;
+}

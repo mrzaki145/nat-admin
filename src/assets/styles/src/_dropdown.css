@@ -1,0 +1,7 @@
+.hs-dropdown-menu {
+  @apply bg-gray-100 rounded-xl z-50 p-4 lg:p-6 transition-[opacity,margin] duration-200 min-w-60 shadow-md;
+}
+
+.table .hs-dropdown-menu {
+  @apply space-y-4;
+}

@@ -1,0 +1,15 @@
+.btn {
+  @apply flex justify-center items-center gap-2 px-6 h-12 transition-colors cursor-pointer rounded;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-blue;
+}
+
+.btn-white {
+  @apply bg-white text-primary hover:bg-gray/5;
+}
+
+.btn-gost {
+  @apply text-primary hover:text-blue;
+}

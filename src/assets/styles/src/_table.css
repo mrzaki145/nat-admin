@@ -1,0 +1,43 @@
+.table {
+  @apply table-auto w-full bg-gray-100;
+}
+
+.table thead {
+  @apply border-b border-gray/20;
+}
+
+.table tbody {
+  @apply divide-y divide-gray/10;
+}
+
+.table th {
+  @apply font-normal;
+}
+
+th,
+td {
+  @apply px-5 text-start whitespace-nowrap;
+}
+
+.table th {
+  @apply py-6 first:ps-10 last:pe-10;
+}
+.table.sm th {
+  @apply py-4;
+}
+.table th button {
+  @apply flex items-center gap-1.5;
+}
+.table th button svg {
+  @apply size-5 text-primary;
+}
+
+.table th button[aria-pressed="true"] svg {
+  @apply rotate-180;
+}
+.table td {
+  @apply py-4 truncate max-w-[300px] first:ps-10 last:pe-10;
+}
+.table.sm th {
+  @apply py-2.5;
+}

@@ -1,0 +1,16 @@
+.sidebar {
+  @apply w-full max-w-64 h-screen sticky top-0 bg-white px-6 pt-11;
+  background: linear-gradient(91.64deg, #f2f8ff 0%, #ffffff 100%);
+}
+
+.sidebar__logo {
+  @apply w-24 mx-auto mb-10;
+}
+
+.sidebar__link {
+  @apply w-full h-14 px-6 flex items-center gap-2 rounded-lg bg-white text-primary hover:text-blue hover:bg-blue-100 transition-colors aria-current:bg-blue-100 aria-current:text-blue;
+}
+
+.sidebar__link svg {
+  @apply size-6;
+}
