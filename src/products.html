@@ -174,22 +174,53 @@
 
           <div class="px-12 pb-14">
             <div class="flex items-center justify-between mb-6">
-              <div
-                class="flex items-center bg-white w-full max-w-md border border-gray-100 mb-6 h-14 px-6 gap-2"
-              >
-                <svg class="size-6 text-primary shrink-0">
-                  <use href="./assets/images/sprite.svg#search"></use>
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  class="form__input w-full"
-                />
-                <button type="button" class="size-50 shrink-0">
-                  <svg class="size-6 text-primary">
-                    <use href="./assets/images/sprite.svg#plus"></use>
-                  </svg>
-                </button>
+              <div class="relative w-full max-w-md">
+                <div
+                  class="flex items-center bg-white border border-gray-100 py-4 px-6 gap-2"
+                >
+                  <button id="searchBtn" type="button" class="size-50 shrink-0">
+                    <svg class="size-6 text-primary shrink-0">
+                      <use href="./assets/images/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search..."
+                    class="form__input w-full"
+                  />
+                  <button type="button" class="size-5 shrink-0">
+                    <svg class="size-6 text-primary">
+                      <use href="./assets/images/sprite.svg#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  id="searchList"
+                  class="hidden absolute top-full mt-2 inset-x-0 w-full bg-white shadow-sm p-4 lg:p-6"
+                >
+                  <p class="font-bold mb-4">6 items found</p>
+
+                  <div class="bg-gray-100 rounded-lg">
+                    <button
+                      type="button"
+                      class="appearance-none w-full text-start flex items-center gap-4 px-6 py-2"
+                    >
+                      <div class="size-10 rounded-md shrink-0">
+                        <img
+                          src="./assets/images/products/1.png"
+                          class="size-full object-cover origin-center"
+                          alt=""
+                        />
+                      </div>
+
+                      <p class="flex-1 truncate">Headlight Bulbs</p>
+
+                      <p>HLB-7789</p>
+                    </button>
+                  </div>
+                </div>
               </div>
 
               <button
@@ -321,6 +352,18 @@
                   </div>
                 </div>
               </div>
+
+              <div class="form__field">
+                <label class="form__label" for="comments">Files</label>
+                <div class="form__control py-4 h-auto">
+                  <input
+                    type="file"
+                    multiple
+                    class="form__input resize-none"
+                    placeholder="Upload Files"
+                  />
+                </div>
+              </div>
             </div>
 
             <button type="submit" class="btn btn-primary w-full h-14">
@@ -383,5 +426,31 @@
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+
+    <script>
+      // search
+      const searchBtn = document.getElementById("searchBtn");
+      const searchInput = document.getElementById("searchInput");
+      const searchList = document.getElementById("searchList");
+
+      searchBtn.addEventListener("click", () => {
+        searchList.classList.toggle("hidden");
+      });
+
+      searchInput.addEventListener("input", () => {
+        if (searchInput.value) {
+          searchList.classList.remove("hidden");
+        } else {
+          searchList.classList.add("hidden");
+        }
+      });
+
+      // hide list when item selected
+      searchList.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+          searchList.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
