@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAT</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+
+  <body class="site-bg">
+    <div id="app">
+      <div class="flex items-start">
+        <div class="sidebar">
+          <img
+            src="./assets/images/logo-aum-sm-2.svg"
+            class="sidebar__logo"
+            alt=""
+          />
+
+          <nav class="space-y-2">
+            <a href="./dashboard.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#dashboard"></use>
+              </svg>
+              Dashboard
+            </a>
+            <a href="./reports.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#reports"></use>
+              </svg>
+              Reports
+            </a>
+            <a href="./orders.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#box"></use>
+              </svg>
+              Orders
+            </a>
+            <a href="./shipments.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#truck"></use>
+              </svg>
+              Shipments
+            </a>
+            <a href="./users.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#users"></use>
+              </svg>
+              Users
+            </a>
+            <a href="./products.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#home"></use>
+              </svg>
+              Products
+            </a>
+            <a href="./logs.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#logs"></use>
+              </svg>
+              Logs
+            </a>
+
+            <div>
+              <button
+                type="button"
+                class="hs-collapse-toggle sidebar__link open"
+                aria-expanded="true"
+                aria-controls="settings-collapse"
+                data-hs-collapse="#settings-collapse"
+              >
+                <svg>
+                  <use href="./assets/images/sprite.svg#settings"></use>
+                </svg>
+                Settings
+                <svg class="arrow">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div
+                id="settings-collapse"
+                class="hs-collapse open w-full overflow-hidden transition-[height] duration-300"
+              >
+                <ul class="space-y-2">
+                  <li>
+                    <a href="./settings.html">
+                      General
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a aria-current="page" href="./settings-users.html">
+                      Users
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./settings-lookups.html">
+                      Lookups
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="flex-1">
+          <div
+            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+          >
+            <p class="lg:text-3xl text-2xl font-bold">Manage Users</p>
+
+            <div class="flex items-center gap-3">
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#search"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#user"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div
+                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
+                  >
+                    <svg class="size-14 text-blue">
+                      <use href="./assets/images/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                    <p class="text-gray font-bold">name@email.com</p>
+                  </div>
+
+                  <a
+                    href="./profile.html"
+                    class="btn btn-primary h-10 w-auto mb-2"
+                    >View Profile</a
+                  >
+                  <button>Logout</button>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#bell"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                  </div>
+
+                  <button class="block font-bold mb-2">Mark All Read</button>
+                  <a class="block font-bold" href="./notifications.html"
+                    >View All</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-10 pb-14">
+            <div class="flex flex-col">
+              <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                  <div class="overflow-hidden">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Permissions</th>
+                          <th class="text-end">
+                            <a
+                              href="./settings-add-user.html"
+                              class="btn btn-primary ms-auto inline-flex"
+                            >
+                              Add User
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td class="font-bold">Salma Hareb</td>
+                          <td>username@email.com</td>
+                          <td>592740184</td>
+                          <td>
+                            Reports, Orders, Shipments, Users, Products, Logs
+                          </td>
+                          <td>
+                            <div class="flex items-center justify-end gap-8">
+                              <button
+                                type="button"
+                                class="size-8 inline-flex items-center justify-center"
+                              >
+                                <svg class="size-6 text-primary">
+                                  <use
+                                    href="./assets/images/sprite.svg#edit"
+                                  ></use>
+                                </svg>
+                              </button>
+                              <button
+                                type="button"
+                                class="size-8 inline-flex items-center justify-center"
+                              >
+                                <svg class="size-6 text-primary">
+                                  <use
+                                    href="./assets/images/sprite.svg#x"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+  </body>
+</html>
