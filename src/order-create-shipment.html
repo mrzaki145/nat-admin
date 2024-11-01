@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAT</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+
+  <body class="site-bg">
+    <div id="app">
+      <div class="flex items-start">
+        <div class="sidebar">
+          <img
+            src="./assets/images/logo-aum-sm-2.svg"
+            class="sidebar__logo"
+            alt=""
+          />
+
+          <nav class="space-y-2">
+            <a href="./dashboard.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#dashboard"></use>
+              </svg>
+              Dashboard
+            </a>
+            <a href="./reports.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#reports"></use>
+              </svg>
+              Reports
+            </a>
+            <a href="./orders.html" aria-current="page" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#box"></use>
+              </svg>
+              Orders
+            </a>
+            <a href="./shipments.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#truck"></use>
+              </svg>
+              Shipments
+            </a>
+            <a href="./users.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#users"></use>
+              </svg>
+              Users
+            </a>
+            <a href="./products.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#home"></use>
+              </svg>
+              Products
+            </a>
+            <a href="./logs.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#logs"></use>
+              </svg>
+              Logs
+            </a>
+          </nav>
+        </div>
+
+        <div class="flex-1">
+          <div
+            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+          >
+            <p class="lg:text-3xl text-2xl font-bold">
+              Create Shipment for Order 5963
+            </p>
+
+            <div class="flex items-center gap-3">
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#search"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#user"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div
+                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
+                  >
+                    <svg class="size-14 text-blue">
+                      <use href="./assets/images/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                    <p class="text-gray font-bold">name@email.com</p>
+                  </div>
+
+                  <a
+                    href="./profile.html"
+                    class="btn btn-primary h-10 w-auto mb-2"
+                    >View Profile</a
+                  >
+                  <button>Logout</button>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#bell"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                  </div>
+
+                  <button class="block font-bold mb-2">Mark All Read</button>
+                  <a class="block font-bold" href="./notifications.html"
+                    >View All</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-10 pb-14 space-y-6">
+            <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
+              <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                Shipping Details
+              </p>
+
+              <form>
+                <div class="form__group">
+                  <div class="form__row">
+                    <div class="form__field">
+                      <label class="form__label">Carrier</label>
+                      <div class="form__control">
+                        <select class="form__input">
+                          <option>Select Carrier</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form__field">
+                      <label class="form__label">Tracking Number</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Tracking Number"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form__field">
+                      <label class="form__label">Status</label>
+                      <div class="form__control">
+                        <select class="form__input">
+                          <option>Select Status</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="form__field">
+                      <label class="form__label">Contact Email</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Contact Email"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form__field">
+                      <label class="form__label">Contact Name</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Contact Name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form__field">
+                      <label class="form__label">Contact Phone</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Contact Phone"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="form__field">
+                      <label class="form__label">Shipping Address</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Shipping Address"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form__field">
+                      <label class="form__label">Notes</label>
+                      <div class="form__control">
+                        <input
+                          type="email"
+                          class="form__input"
+                          placeholder="Notes"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                  <div class="overflow-hidden">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <button>
+                              <svg>
+                                <use
+                                  href="./assets/images/sprite.svg#reverse"
+                                ></use>
+                              </svg>
+
+                              Item
+                            </button>
+                          </th>
+                          <th>Part #</th>
+                          <th>Availability</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th>Discount</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="./assets/images/products/2.png"
+                                class="size-10 shrink-0"
+                                alt=""
+                              />
+                              Windshield Wipers
+                            </div>
+                          </td>
+                          <td>HLB-7789</td>
+                          <td class="text-green">In Stock</td>
+                          <td>35</td>
+                          <td class="">75 Riyal</td>
+                          <td class="">10%</td>
+                          <td class="font-bold">2,360 Riyal</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col lg:items-center lg:flex-row gap-4">
+              <button
+                type="button"
+                data-hs-overlay="#shipment-created-modal"
+                class="btn btn-primary ms-auto"
+              >
+                Create Shipment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modals -->
+    <!-- send quote modal -->
+    <div
+      role="dialog"
+      tabindex="-1"
+      id="shipment-created-modal"
+      class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none hs-overlay-open:bg-black/25"
+    >
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center"
+      >
+        <div class="w-full bg-white rounded-md pointer-events-auto p-6 lg:p-10">
+          <svg class="size-12 mb-8 text-primary">
+            <use href="./assets/images/sprite.svg#truck"></use>
+          </svg>
+
+          <div class="text-lg mb-8">
+            <p class="font-bold uppercase mb-1">Shipment Created</p>
+            <p>
+              Shipment was created successfully for this order. You can review
+              updates in the shipment page.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            data-hs-overlay="#shipment-created-modal"
+            class="btn btn-primary w-auto mb-3"
+          >
+            View Updates
+          </button>
+          <a href="./orders.html" class="font-bold">Back to Orders</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+  </body>
+</html>
