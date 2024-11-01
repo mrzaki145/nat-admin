@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAT</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+
+  <body class="site-bg">
+    <div id="app">
+      <div class="flex items-start">
+        <div class="sidebar">
+          <img
+            src="./assets/images/logo-aum-sm-2.svg"
+            class="sidebar__logo"
+            alt=""
+          />
+
+          <nav class="space-y-2">
+            <a href="./dashboard.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#dashboard"></use>
+              </svg>
+              Dashboard
+            </a>
+            <a href="./reports.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#reports"></use>
+              </svg>
+              Reports
+            </a>
+            <a href="./orders.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#box"></use>
+              </svg>
+              Orders
+            </a>
+            <a
+              href="./shipments.html"
+              aria-current="page"
+              class="sidebar__link"
+            >
+              <svg>
+                <use href="./assets/images/sprite.svg#truck"></use>
+              </svg>
+              Shipments
+            </a>
+            <a href="./users.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#users"></use>
+              </svg>
+              Users
+            </a>
+            <a href="./products.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#home"></use>
+              </svg>
+              Products
+            </a>
+            <a href="./logs.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#logs"></use>
+              </svg>
+              Logs
+            </a>
+          </nav>
+        </div>
+
+        <div class="flex-1">
+          <div
+            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+          >
+            <p class="lg:text-3xl text-2xl font-bold">Orders</p>
+
+            <div class="flex items-center gap-3">
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#search"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#user"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div
+                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
+                  >
+                    <svg class="size-14 text-blue">
+                      <use href="./assets/images/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                    <p class="text-gray font-bold">name@email.com</p>
+                  </div>
+
+                  <a
+                    href="./profile.html"
+                    class="btn btn-primary h-10 w-auto mb-2"
+                    >View Profile</a
+                  >
+                  <button>Logout</button>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#bell"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                  </div>
+
+                  <button class="block font-bold mb-2">Mark All Read</button>
+                  <a class="block font-bold" href="./notifications.html"
+                    >View All</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-10 pb-14">
+            <div class="flex flex-col lg:flex-row gap-6 mb-10">
+              <div
+                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+              >
+                <p>Shipped</p>
+                <p class="text-3xl font-black">12</p>
+              </div>
+              <div
+                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+              >
+                <p>Pending Shipping</p>
+                <p class="text-3xl font-black">35</p>
+              </div>
+              <div
+                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+              >
+                <p>Delivered</p>
+                <p class="text-3xl font-black">16</p>
+              </div>
+              <div
+                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+              >
+                <p>Returned</p>
+                <p class="text-3xl font-black">7</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                  <div class="overflow-hidden">
+                    <div class="bg-blue-100 p-4 flex items-center gap-10">
+                      <div
+                        class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                      >
+                        <button
+                          type="button"
+                          class="hs-dropdown-toggle font-bold inline-flex items-center gap-1.5"
+                        >
+                          Update Status
+                          <svg class="size-5">
+                            <use
+                              href="./assets/images/sprite.svg#chevron-down"
+                            ></use>
+                          </svg>
+                        </button>
+
+                        <div
+                          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          role="menu"
+                        >
+                          <div class="space-y-3">
+                            <label class="form__checkbox">
+                              <input type="radio" name="status-1" class="sm" />
+                              <span>Shipped</span>
+                            </label>
+                            <label class="form__checkbox">
+                              <input type="radio" name="status-1" class="sm" />
+                              <span>Pending Shipping</span>
+                            </label>
+                            <label class="form__checkbox">
+                              <input type="radio" name="status-1" class="sm" />
+                              <span>Delivered</span>
+                            </label>
+                            <label class="form__checkbox">
+                              <input type="radio" name="status-1" class="sm" />
+                              <span>Returned</span>
+                            </label>
+                          </div>
+
+                          <button class="btn btn-primary h-10">
+                            Update Status
+                          </button>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        data-hs-overlay="#export-modal"
+                        class="font-bold"
+                      >
+                        Export Selected
+                      </button>
+                      <button
+                        type="button"
+                        data-hs-overlay="#delete-orders-modal"
+                        class="font-bold"
+                      >
+                        Delete All
+                      </button>
+                    </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="size-6">
+                            <input type="checkbox" class="size-6" />
+                          </th>
+                          <th class="text-end">#</th>
+                          <th>
+                            <button>
+                              <svg>
+                                <use
+                                  href="./assets/images/sprite.svg#reverse"
+                                ></use>
+                              </svg>
+                              Name
+                            </button>
+                          </th>
+                          <th>
+                            <div
+                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                            >
+                              <button class="hs-dropdown-toggle">
+                                <svg>
+                                  <use
+                                    href="./assets/images/sprite.svg#arrow-down"
+                                  ></use>
+                                </svg>
+                                Status
+                              </button>
+
+                              <div
+                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                                role="menu"
+                              >
+                                <div class="space-y-3">
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>Shipped</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>Pending Shipping</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>Delivered</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>Returned</span>
+                                  </label>
+                                </div>
+
+                                <button class="btn btn-primary h-10">
+                                  Apply Filters
+                                </button>
+                                <button>clear all</button>
+                              </div>
+                            </div>
+                          </th>
+                          <th>Carrier</th>
+                          <th>Tracking No.</th>
+                          <th>
+                            <button>
+                              <svg>
+                                <use
+                                  href="./assets/images/sprite.svg#reverse"
+                                ></use>
+                              </svg>
+                              Expected
+                            </button>
+                          </th>
+                          <th>
+                            <div
+                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                            >
+                              <button class="hs-dropdown-toggle">
+                                <svg>
+                                  <use
+                                    href="./assets/images/sprite.svg#arrow-down"
+                                  ></use>
+                                </svg>
+                                City
+                              </button>
+
+                              <div
+                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                                role="menu"
+                              >
+                                <div class="space-y-3">
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>(3) Jeddah</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>(2) Riyadh</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>(2) Taif</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input type="checkbox" class="sm" />
+                                    <span>(1) Tabuk</span>
+                                  </label>
+                                </div>
+
+                                <button class="btn btn-primary h-10">
+                                  Apply Filters
+                                </button>
+                                <button>clear all</button>
+                              </div>
+                            </div>
+                          </th>
+                          <th>Address/Pickup</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <input type="checkbox" class="size-6" />
+                          </td>
+                          <td class="text-end">
+                            <a href="./shipment-details.html">5432</a>
+                          </td>
+                          <td>Al Jazeera Motors</td>
+                          <td>
+                            <div
+                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                            >
+                              <button
+                                class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                              >
+                                RFQ
+                                <svg class="size-4 text-primary">
+                                  <use
+                                    href="./assets/images/sprite.svg#chevron-down"
+                                  ></use>
+                                </svg>
+                              </button>
+
+                              <div
+                                role="menu"
+                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                              >
+                                <div class="space-y-3">
+                                  <label class="form__checkbox">
+                                    <input
+                                      type="radio"
+                                      name="status-1"
+                                      class="sm"
+                                      checked
+                                    />
+                                    <span>Shipped</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input
+                                      type="radio"
+                                      name="status-1"
+                                      class="sm"
+                                      checked
+                                    />
+                                    <span>Pending Shipping</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input
+                                      type="radio"
+                                      name="status-1"
+                                      class="sm"
+                                      checked
+                                    />
+                                    <span>Delivered</span>
+                                  </label>
+                                  <label class="form__checkbox">
+                                    <input
+                                      type="radio"
+                                      name="status-1"
+                                      class="sm"
+                                      checked
+                                    />
+                                    <span>Returned</span>
+                                  </label>
+                                </div>
+
+                                <button class="btn btn-primary h-10">
+                                  Update Status
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Aramex</td>
+                          <td>753951456</td>
+                          <td>19 September</td>
+                          <td>Riyadh</td>
+                          <td>26 Prince Road from King road.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modals -->
+    <!-- cancel order -->
+    <div
+      role="dialog"
+      tabindex="-1"
+      id="delete-orders-modal"
+      class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none hs-overlay-open:bg-black/25"
+    >
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center"
+      >
+        <div
+          class="w-full orange-gradient rounded-md pointer-events-auto p-6 lg:p-10"
+        >
+          <svg class="size-12 mb-8 text-primary">
+            <use href="./assets/images/sprite.svg#x"></use>
+          </svg>
+
+          <div class="text-lg mb-8">
+            <p class="font-bold uppercase mb-1">Delete Orders</p>
+            <p>Are your sure you want to delete these 10 orders?</p>
+          </div>
+
+          <button type="button" class="btn btn-primary w-auto">
+            Delete Orders
+          </button>
+          <!-- <p class="text-orange">Cancelling order...</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- survey -->
+    <div
+      role="dialog"
+      tabindex="-1"
+      id="export-modal"
+      class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none hs-overlay-open:bg-black/25"
+    >
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-5xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center"
+      >
+        <div
+          class="relative bg-gray-100 w-full p-6 lg:p-10 pointer-events-auto"
+        >
+          <button
+            type="button"
+            data-hs-overlay="#survey-modal"
+            class="absolute top-4 end-4 size-10"
+          >
+            <svg class="size-8 text-primary">
+              <use href="./assets/images/sprite.svg#x"></use>
+            </svg>
+          </button>
+
+          <div class="text-center text-lg mb-8">
+            <p class="font-black uppercase text-center">Export Report</p>
+          </div>
+
+          <form class="w-full max-w-2xl mx-auto">
+            <div class="form__group mb-8">
+              <div class="flex gap-4">
+                <label class="flex-1">
+                  <input
+                    type="radio"
+                    class="peer sr-only"
+                    name="file-type"
+                    value="pdf"
+                    checked
+                  />
+                  <span
+                    class="group w-full bg-white py-3.5 px-2 rounded flex items-center justify-center gap-2 text-center cursor-pointer peer-checked:bg-blue peer-checked:text-white"
+                  >
+                    <svg class="text-white size-5 -ms-5">
+                      <use href="./assets/images/sprite.svg#check"></use>
+                    </svg>
+                    .PDF</span
+                  >
+                </label>
+                <label class="flex-1">
+                  <input
+                    type="radio"
+                    class="peer sr-only"
+                    name="file-type"
+                    value="xlsx"
+                    checked
+                  />
+                  <span
+                    class="group w-full bg-white py-3.5 px-2 rounded flex items-center justify-center gap-2 text-center cursor-pointer peer-checked:bg-blue peer-checked:text-white"
+                  >
+                    <svg class="text-white size-5 -ms-5">
+                      <use href="./assets/images/sprite.svg#check"></use>
+                    </svg>
+                    .XLSX</span
+                  >
+                </label>
+                <label class="flex-1">
+                  <input
+                    type="radio"
+                    class="peer sr-only"
+                    name="file-type"
+                    value="docx"
+                    checked
+                  />
+                  <span
+                    class="group w-full bg-white py-3.5 px-2 rounded flex items-center justify-center gap-2 text-center cursor-pointer peer-checked:bg-blue peer-checked:text-white"
+                  >
+                    <svg class="text-white size-5 -ms-5">
+                      <use href="./assets/images/sprite.svg#check"></use>
+                    </svg>
+                    .DOCX</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full h-14">
+              Export File
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAT</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+
+  <body class="site-bg">
+    <div id="app">
+      <div class="flex items-start">
+        <div class="sidebar">
+          <img
+            src="./assets/images/logo-aum-sm-2.svg"
+            class="sidebar__logo"
+            alt=""
+          />
+
+          <nav class="space-y-2">
+            <a href="./dashboard.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#dashboard"></use>
+              </svg>
+              Dashboard
+            </a>
+            <a href="./reports.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#reports"></use>
+              </svg>
+              Reports
+            </a>
+            <a href="./orders.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#box"></use>
+              </svg>
+              Orders
+            </a>
+            <a
+              href="./shipments.html"
+              aria-current="page"
+              class="sidebar__link"
+            >
+              <svg>
+                <use href="./assets/images/sprite.svg#truck"></use>
+              </svg>
+              Shipments
+            </a>
+            <a href="./users.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#users"></use>
+              </svg>
+              Users
+            </a>
+            <a href="./products.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#home"></use>
+              </svg>
+              Products
+            </a>
+            <a href="./logs.html" class="sidebar__link">
+              <svg>
+                <use href="./assets/images/sprite.svg#logs"></use>
+              </svg>
+              Logs
+            </a>
+          </nav>
+        </div>
+
+        <div class="flex-1">
+          <div
+            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+          >
+            <p class="lg:text-3xl text-2xl font-bold">Shipment Details</p>
+
+            <div class="flex items-center gap-3">
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#search"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#user"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div
+                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
+                  >
+                    <svg class="size-14 text-blue">
+                      <use href="./assets/images/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+
+                  <div class="mb-4">
+                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                    <p class="text-gray font-bold">name@email.com</p>
+                  </div>
+
+                  <a
+                    href="./profile.html"
+                    class="btn btn-primary h-10 w-auto mb-2"
+                    >View Profile</a
+                  >
+                  <button>Logout</button>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+              >
+                <button
+                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                >
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#bell"></use>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                >
+                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                    <div class="pt-4 first:pt-0">
+                      <p>
+                        Payment for invoice #56789 has been successfully
+                        received. Thank you for your purchase!
+                      </p>
+                      <p class="text-sm text-gray">Just Now</p>
+                    </div>
+                  </div>
+
+                  <button class="block font-bold mb-2">Mark All Read</button>
+                  <a class="block font-bold" href="./notifications.html"
+                    >View All</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-10 pb-14 space-y-6">
+            <div class="flex flex-col lg:flex-row gap-6">
+              <div
+                class="box-gradient border border-white flex-1 flex flex-col p-6 lg:p-10"
+              >
+                <div class="border-b pb-6 mb-6 border-b-gray/25">
+                  <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                    Client
+                  </p>
+
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                    >
+                      <svg class="size-6 text-primary">
+                        <use href="./assets/images/sprite.svg#home"></use>
+                      </svg>
+                    </div>
+
+                    <div class="flex-1">
+                      <p class="text-gray text-sm font-semibold">Client</p>
+                      <p class="text-lg">Al Jazeera Motors</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-1">
+                  <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                    Order Summary
+                  </p>
+
+                  <div class="space-y-6 mb-8">
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#box"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">Items</p>
+                        <p class="text-lg">160 Items</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#receipt"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Total Cost
+                        </p>
+                        <p class="text-lg">18,780 Riyal</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#money"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Payment Type
+                        </p>
+                        <p class="text-lg">Cash</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="size-12 rounded-md border border-gray/15 inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#document"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Payment Documents
+                        </p>
+                        <div class="space-y-1">
+                          <div
+                            class="bg-white border border-gray-100 rounded flex items-center gap-2 p-1"
+                          >
+                            <svg class="size-6 text-primary/75">
+                              <use
+                                href="./assets/images/sprite.svg#file-upload"
+                              ></use>
+                            </svg>
+                            <p class="flex-1 max-w-40 truncate text-sm">
+                              Invoice.pdf
+                            </p>
+
+                            <a href="#">
+                              <svg class="size-5 text-primary">
+                                <use
+                                  href="./assets/images/sprite.svg#eye"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div
+                            class="bg-white border border-gray-100 rounded flex items-center gap-2 p-1"
+                          >
+                            <svg class="size-6 text-primary/75">
+                              <use
+                                href="./assets/images/sprite.svg#file-upload"
+                              ></use>
+                            </svg>
+                            <p class="flex-1 max-w-40 truncate text-sm">
+                              Invoice.pdf
+                            </p>
+
+                            <a href="#">
+                              <svg class="size-5 text-primary">
+                                <use
+                                  href="./assets/images/sprite.svg#eye"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <div
+                            class="bg-white border border-gray-100 rounded flex items-center gap-2 p-1"
+                          >
+                            <svg class="size-6 text-primary/75">
+                              <use
+                                href="./assets/images/sprite.svg#file-upload"
+                              ></use>
+                            </svg>
+                            <p class="flex-1 max-w-40 truncate text-sm">
+                              Invoice.pdf
+                            </p>
+
+                            <a href="#">
+                              <svg class="size-5 text-primary">
+                                <use
+                                  href="./assets/images/sprite.svg#eye"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 rounded-md border border-gray/15 inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#note"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">Notes</p>
+                        <p class="text-lg">No notes.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    data-hs-overlay="#edit-details-modal"
+                    class="btn btn-gost font-bold h-auto px-0 mt-auto"
+                  >
+                    View All Details
+                  </button>
+                </div>
+              </div>
+
+              <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
+                <div class="border-b pb-6 mb-6 border-b-gray/25">
+                  <div class="flex items-center gap-3 mb-6">
+                    <p class="text-lg lg:text-xl font-bold uppercase">
+                      Shipping Details
+                    </p>
+
+                    <div
+                      class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                    >
+                      <button
+                        class="hs-dropdown-toggle text-primary bg-white rounded-full px-10 py-2 inline-flex items-center gap-2 text-sm font-semibold"
+                      >
+                        Pending Shipping
+                        <svg class="size-4 text-primary">
+                          <use
+                            href="./assets/images/sprite.svg#chevron-down"
+                          ></use>
+                        </svg>
+                      </button>
+
+                      <div
+                        role="menu"
+                        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                      >
+                        <div class="space-y-3">
+                          <label class="form__checkbox">
+                            <input type="radio" name="status-1" class="sm" />
+                            <span>Shipped</span>
+                          </label>
+                          <label class="form__checkbox">
+                            <input type="radio" name="status-1" class="sm" />
+                            <span>Pending Shipping</span>
+                          </label>
+                          <label class="form__checkbox">
+                            <input type="radio" name="status-1" class="sm" />
+                            <span>Delivered</span>
+                          </label>
+                          <label class="form__checkbox">
+                            <input type="radio" name="status-1" class="sm" />
+                            <span>Returned</span>
+                          </label>
+                        </div>
+
+                        <button class="btn btn-primary h-10">
+                          Update Status
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#carrier"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Receiving by
+                        </p>
+                        <p class="text-lg">Delivery</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use
+                            href="./assets/images/sprite.svg#buildings"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">City</p>
+                        <p class="text-lg">Riyadh</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#map-pin"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Shipping Address
+                        </p>
+                        <p class="text-lg">Side st. form Main st.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-10">
+                  <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                    Carrier Details
+                  </p>
+
+                  <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#truck"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">Carrier</p>
+                        <p class="text-lg">Aramex</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#path"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Tracking Number
+                        </p>
+                        <p class="text-lg">753951456</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                      >
+                        <svg class="size-6 text-primary">
+                          <use href="./assets/images/sprite.svg#calender"></use>
+                        </svg>
+                      </div>
+
+                      <div class="flex-1">
+                        <p class="text-gray text-sm font-semibold">
+                          Expected Delivery
+                        </p>
+                        <p class="text-lg">19 September</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  data-hs-overlay="#edit-details-modal"
+                  class="btn btn-gost font-bold h-auto px-0 mt-auto"
+                >
+                  View Carrier Website
+                </button>
+              </div>
+
+              <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
+                <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                  Carrier Updates
+                </p>
+
+                <div class="space-y-4">
+                  <p class="flex items-center gap-x-3">
+                    12/9 <span class="text-gray/50">|</span> 15:26
+                    <span class="text-gray/50">|</span> Order confirmed
+                  </p>
+                  <p class="flex items-center gap-x-3">
+                    13/9 <span class="text-gray/50">|</span> 09:58
+                    <span class="text-gray/50">|</span> Order shipped
+                  </p>
+                  <p class="flex items-center gap-x-3">
+                    13/9 <span class="text-gray/50">|</span> 14:33
+                    <span class="text-gray/50">|</span> Order delivered
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
+  </body>
+</html>
