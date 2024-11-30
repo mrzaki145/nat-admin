@@ -1,5 +1,5 @@
 .sidebar {
-  @apply w-full max-w-64 h-screen sticky top-0 bg-white px-6 pt-11;
+  @apply w-full max-w-64 h-screen fixed z-50 top-0 overflow-y-auto bg-white shrink-0 px-6 pt-10 pb-20;
   background: linear-gradient(91.64deg, #f2f8ff 0%, #ffffff 100%);
 }
 
@@ -8,9 +8,35 @@
 }
 
 .sidebar__link {
-  @apply w-full h-14 px-6 flex items-center gap-2 rounded-lg bg-white text-primary hover:text-blue hover:bg-blue-100 transition-colors aria-current:bg-blue-100 aria-current:text-blue;
+  @apply w-full h-14 px-6 flex items-center gap-2 rounded-lg bg-white text-primary hover:text-blue hover:bg-blue-100 transition-colors aria-current:bg-blue-100 aria-current:text-blue aria-current:font-bold aria-expanded:bg-blue-100 aria-expanded:text-blue aria-expanded:font-bold;
 }
 
 .sidebar__link svg {
   @apply size-6;
+}
+
+.sidebar__link svg.arrow {
+  @apply size-5 ms-auto;
+}
+
+/* hs-collapse */
+
+.hs-collapse {
+  @apply px-6 py-4 bg-blue-100 rounded-b-lg;
+}
+
+.sidebar__link.open {
+  @apply rounded-b-none border-b border-blue/25;
+}
+
+.hs-collapse a {
+  @apply ps-2 py-1 rounded-md flex items-center justify-between aria-current:border-blue border border-transparent aria-current:text-blue;
+}
+
+.hs-collapse a svg {
+  @apply size-5 text-blue -rotate-90;
+}
+
+.hs-collapse a:not([aria-current="page"]) svg {
+  @apply hidden;
 }
