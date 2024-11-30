@@ -11,22 +11,23 @@
 }
 
 .table th {
-  @apply font-normal;
+  @apply font-normal z-[80] sticky top-0;
 }
 
 th,
 td {
-  @apply px-5 text-start whitespace-nowrap;
+  @apply px-4 text-start whitespace-nowrap;
 }
 
 .table th {
-  @apply py-6 first:ps-10 last:pe-10;
+  @apply py-5 first:ps-8 last:pe-8  bg-gray-100;
 }
 .table.sm th {
-  @apply py-4;
+  @apply py-3.5;
 }
-.table th button {
-  @apply flex items-center gap-1.5;
+.table th button,
+.table th a {
+  @apply inline-flex items-center gap-1.5;
 }
 .table th button svg {
   @apply size-5 text-primary;
