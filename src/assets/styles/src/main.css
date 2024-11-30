@@ -14,12 +14,12 @@
 
 @layer base {
   html,
-  body,
-  #app {
-    min-height: 100%;
+  body {
+    @apply min-h-full;
   }
 
   body {
+    overflow-x: hidden;
     color: theme(colors.primary);
     font-family: "Readex Pro", sans-serif;
   }
