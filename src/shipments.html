@@ -11,455 +11,1220 @@
 
   <body class="site-bg">
     <div id="app">
-      <div class="flex items-start">
-        <div class="sidebar">
-          <img
-            src="./assets/images/logo-aum-sm-2.svg"
-            class="sidebar__logo"
-            alt=""
-          />
+      <div class="sidebar">
+        <img
+          src="./assets/images/logo-aum-sm-2.svg"
+          class="sidebar__logo"
+          alt=""
+        />
 
-          <nav class="space-y-2">
-            <a href="./dashboard.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#dashboard"></use>
-              </svg>
-              Dashboard
-            </a>
-            <a href="./reports.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#reports"></use>
-              </svg>
-              Reports
-            </a>
-            <a href="./orders.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#box"></use>
-              </svg>
-              Orders
-            </a>
-            <a
-              href="./shipments.html"
-              aria-current="page"
-              class="sidebar__link"
+        <nav class="space-y-2">
+          <a href="./dashboard.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#dashboard"></use>
+            </svg>
+            Dashboard
+          </a>
+          <a href="./reports.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#reports"></use>
+            </svg>
+            Reports
+          </a>
+          <a href="./orders.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#box"></use>
+            </svg>
+            Orders
+          </a>
+          <a href="./shipments.html" aria-current="page" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#truck"></use>
+            </svg>
+            Shipments
+          </a>
+          <a href="./users.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#users"></use>
+            </svg>
+            Users
+          </a>
+          <a href="./products.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#home"></use>
+            </svg>
+            Products
+          </a>
+          <a href="./logs.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#logs"></use>
+            </svg>
+            Logs
+          </a>
+
+          <div>
+            <button
+              type="button"
+              class="hs-collapse-toggle sidebar__link"
+              aria-expanded="false"
+              aria-controls="settings-collapse"
+              data-hs-collapse="#settings-collapse"
             >
               <svg>
-                <use href="./assets/images/sprite.svg#truck"></use>
+                <use href="./assets/images/sprite.svg#settings"></use>
               </svg>
-              Shipments
-            </a>
-            <a href="./users.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#users"></use>
+              Settings
+              <svg class="arrow">
+                <use href="./assets/images/sprite.svg#chevron-down"></use>
               </svg>
-              Users
-            </a>
-            <a href="./products.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#home"></use>
-              </svg>
-              Products
-            </a>
-            <a href="./logs.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#logs"></use>
-              </svg>
-              Logs
-            </a>
-          </nav>
-        </div>
+            </button>
 
-        <div class="flex-1">
-          <div
-            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
-          >
-            <p class="lg:text-3xl text-2xl font-bold">Orders</p>
+            <div
+              id="settings-collapse"
+              class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300"
+            >
+              <ul class="space-y-2">
+                <li>
+                  <a href="./settings.html">
+                    General
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="./settings-users.html">
+                    Users
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="./settings-lookups.html">
+                    Lookups
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-            <div class="flex items-center gap-3">
+      <div class="ms-64 w-[calc(100%-16rem)]">
+        <div
+          class="z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+        >
+          <p class="lg:text-3xl text-2xl font-bold">Orders</p>
+
+          <div class="flex items-center gap-3">
+            <button
+              class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+            >
+              <svg class="size-6 text-primary">
+                <use href="./assets/images/sprite.svg#search"></use>
+              </svg>
+            </button>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
               <button
                 class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
               >
                 <svg class="size-6 text-primary">
-                  <use href="./assets/images/sprite.svg#search"></use>
+                  <use href="./assets/images/sprite.svg#user"></use>
                 </svg>
               </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                <div
+                  class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
                 >
-                  <svg class="size-6 text-primary">
+                  <svg class="size-14 text-blue">
                     <use href="./assets/images/sprite.svg#user"></use>
                   </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div
-                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
-                  >
-                    <svg class="size-14 text-blue">
-                      <use href="./assets/images/sprite.svg#user"></use>
-                    </svg>
-                  </div>
-
-                  <div class="mb-4">
-                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
-                    <p class="text-gray font-bold">name@email.com</p>
-                  </div>
-
-                  <a
-                    href="./profile.html"
-                    class="btn btn-primary h-10 w-auto mb-2"
-                    >View Profile</a
-                  >
-                  <button>Logout</button>
                 </div>
+
+                <div class="mb-4">
+                  <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                  <p class="text-gray font-bold">name@email.com</p>
+                </div>
+
+                <a
+                  href="./profile.html"
+                  class="btn btn-primary h-10 w-auto mb-2"
+                  >View Profile</a
+                >
+                <button>Logout</button>
               </div>
+            </div>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#bell"></use>
+                </svg>
+              </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
-                >
-                  <svg class="size-6 text-primary">
-                    <use href="./assets/images/sprite.svg#bell"></use>
-                  </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
+                <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
                   </div>
-
-                  <button class="block font-bold mb-2">Mark All Read</button>
-                  <a class="block font-bold" href="./notifications.html"
-                    >View All</a
-                  >
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
                 </div>
+
+                <button class="block font-bold mb-2">Mark All Read</button>
+                <a class="block font-bold" href="./notifications.html"
+                  >View All</a
+                >
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="px-10 pb-14">
-            <div class="flex flex-col lg:flex-row gap-6 mb-10">
-              <div
-                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
-              >
-                <p>Shipped</p>
-                <p class="text-3xl font-black">12</p>
-              </div>
-              <div
-                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
-              >
-                <p>Pending Shipping</p>
-                <p class="text-3xl font-black">35</p>
-              </div>
-              <div
-                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
-              >
-                <p>Delivered</p>
-                <p class="text-3xl font-black">16</p>
-              </div>
-              <div
-                class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
-              >
-                <p>Returned</p>
-                <p class="text-3xl font-black">7</p>
-              </div>
+        <div class="px-10 pb-14">
+          <div class="flex flex-col lg:flex-row gap-6 mb-10">
+            <div
+              class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+            >
+              <p>Shipped</p>
+              <p class="text-3xl font-black">12</p>
             </div>
+            <div
+              class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+            >
+              <p>Pending Shipping</p>
+              <p class="text-3xl font-black">35</p>
+            </div>
+            <div
+              class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+            >
+              <p>Delivered</p>
+              <p class="text-3xl font-black">16</p>
+            </div>
+            <div
+              class="flex-1 flex items-center justify-between gap-3 bg-white rounded-lg p-4"
+            >
+              <p>Returned</p>
+              <p class="text-3xl font-black">7</p>
+            </div>
+          </div>
 
-            <div class="flex flex-col">
-              <div class="overflow-x-auto">
-                <div class="min-w-full inline-block align-middle">
-                  <div class="overflow-hidden">
-                    <div class="bg-blue-100 p-4 flex items-center gap-10">
-                      <div
-                        class="hs-dropdown [--auto-close:inside] relative inline-flex"
-                      >
-                        <button
-                          type="button"
-                          class="hs-dropdown-toggle font-bold inline-flex items-center gap-1.5"
-                        >
-                          Update Status
-                          <svg class="size-5">
+          <div class="flex flex-col">
+            <div class="overflow-x-auto h-96">
+              <div class="min-w-full inline-block align-middle">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="size-6 sticky top-0">
+                        <input type="checkbox" class="size-6" />
+                      </th>
+                      <th class="text-end sticky top-0">#</th>
+                      <th class="sticky top-0">
+                        <button>
+                          <svg>
                             <use
-                              href="./assets/images/sprite.svg#chevron-down"
+                              href="./assets/images/sprite.svg#reverse"
                             ></use>
                           </svg>
+                          Name
                         </button>
-
+                      </th>
+                      <th class="sticky top-0">
                         <div
-                          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                          role="menu"
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
                         >
-                          <div class="space-y-3">
-                            <label class="form__checkbox">
-                              <input type="radio" name="status-1" class="sm" />
-                              <span>Shipped</span>
-                            </label>
-                            <label class="form__checkbox">
-                              <input type="radio" name="status-1" class="sm" />
-                              <span>Pending Shipping</span>
-                            </label>
-                            <label class="form__checkbox">
-                              <input type="radio" name="status-1" class="sm" />
-                              <span>Delivered</span>
-                            </label>
-                            <label class="form__checkbox">
-                              <input type="radio" name="status-1" class="sm" />
-                              <span>Returned</span>
-                            </label>
-                          </div>
+                          <button class="hs-dropdown-toggle">
+                            <svg>
+                              <use
+                                href="./assets/images/sprite.svg#arrow-down"
+                              ></use>
+                            </svg>
+                            Status
+                          </button>
 
-                          <button class="btn btn-primary h-10">
-                            Update Status
+                          <div
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                            role="menu"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Apply Filters
+                            </button>
+                            <button>clear all</button>
+                          </div>
+                        </div>
+                      </th>
+                      <th class="sticky top-0">Carrier</th>
+                      <th class="sticky top-0">Tracking No.</th>
+                      <th class="sticky top-0">
+                        <button>
+                          <svg>
+                            <use
+                              href="./assets/images/sprite.svg#reverse"
+                            ></use>
+                          </svg>
+                          Expected
+                        </button>
+                      </th>
+                      <th class="sticky top-0">
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button class="hs-dropdown-toggle">
+                            <svg>
+                              <use
+                                href="./assets/images/sprite.svg#arrow-down"
+                              ></use>
+                            </svg>
+                            City
+                          </button>
+
+                          <div
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                            role="menu"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>(3) Jeddah</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>(2) Riyadh</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>(2) Taif</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input type="checkbox" class="sm" />
+                                <span>(1) Tabuk</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Apply Filters
+                            </button>
+                            <button>clear all</button>
+                          </div>
+                        </div>
+                      </th>
+                      <th class="sticky top-0">Address/Pickup</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td colspan="9" style="padding: 0">
+                        <div class="bg-blue-100 p-4 flex items-center gap-10">
+                          <div
+                            class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                          >
+                            <button
+                              type="button"
+                              class="hs-dropdown-toggle font-bold inline-flex items-center gap-1.5"
+                            >
+                              Update Status
+                              <svg class="size-5">
+                                <use
+                                  href="./assets/images/sprite.svg#chevron-down"
+                                ></use>
+                              </svg>
+                            </button>
+
+                            <div
+                              class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                              role="menu"
+                            >
+                              <div class="space-y-3">
+                                <label class="form__checkbox">
+                                  <input
+                                    type="radio"
+                                    name="status-1"
+                                    class="sm"
+                                  />
+                                  <span>Shipped</span>
+                                </label>
+                                <label class="form__checkbox">
+                                  <input
+                                    type="radio"
+                                    name="status-1"
+                                    class="sm"
+                                  />
+                                  <span>Pending Shipping</span>
+                                </label>
+                                <label class="form__checkbox">
+                                  <input
+                                    type="radio"
+                                    name="status-1"
+                                    class="sm"
+                                  />
+                                  <span>Delivered</span>
+                                </label>
+                                <label class="form__checkbox">
+                                  <input
+                                    type="radio"
+                                    name="status-1"
+                                    class="sm"
+                                  />
+                                  <span>Returned</span>
+                                </label>
+                              </div>
+
+                              <button class="btn btn-primary h-10">
+                                Update Status
+                              </button>
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            data-hs-overlay="#export-modal"
+                            class="font-bold"
+                          >
+                            Export Selected
+                          </button>
+                          <button
+                            type="button"
+                            data-hs-overlay="#delete-orders-modal"
+                            class="font-bold"
+                          >
+                            Delete All
                           </button>
                         </div>
-                      </div>
-                      <button
-                        type="button"
-                        data-hs-overlay="#export-modal"
-                        class="font-bold"
-                      >
-                        Export Selected
-                      </button>
-                      <button
-                        type="button"
-                        data-hs-overlay="#delete-orders-modal"
-                        class="font-bold"
-                      >
-                        Delete All
-                      </button>
-                    </div>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th class="size-6">
-                            <input type="checkbox" class="size-6" />
-                          </th>
-                          <th class="text-end">#</th>
-                          <th>
-                            <button>
-                              <svg>
-                                <use
-                                  href="./assets/images/sprite.svg#reverse"
-                                ></use>
-                              </svg>
-                              Name
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
                             </button>
-                          </th>
-                          <th>
-                            <div
-                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
-                            >
-                              <button class="hs-dropdown-toggle">
-                                <svg>
-                                  <use
-                                    href="./assets/images/sprite.svg#arrow-down"
-                                  ></use>
-                                </svg>
-                                Status
-                              </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
 
-                              <div
-                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                                role="menu"
-                              >
-                                <div class="space-y-3">
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>Shipped</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>Pending Shipping</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>Delivered</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>Returned</span>
-                                  </label>
-                                </div>
-
-                                <button class="btn btn-primary h-10">
-                                  Apply Filters
-                                </button>
-                                <button>clear all</button>
-                              </div>
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
                             </div>
-                          </th>
-                          <th>Carrier</th>
-                          <th>Tracking No.</th>
-                          <th>
-                            <button>
-                              <svg>
-                                <use
-                                  href="./assets/images/sprite.svg#reverse"
-                                ></use>
-                              </svg>
-                              Expected
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
                             </button>
-                          </th>
-                          <th>
-                            <div
-                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
-                            >
-                              <button class="hs-dropdown-toggle">
-                                <svg>
-                                  <use
-                                    href="./assets/images/sprite.svg#arrow-down"
-                                  ></use>
-                                </svg>
-                                City
-                              </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
 
-                              <div
-                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                                role="menu"
-                              >
-                                <div class="space-y-3">
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>(3) Jeddah</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>(2) Riyadh</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>(2) Taif</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input type="checkbox" class="sm" />
-                                    <span>(1) Tabuk</span>
-                                  </label>
-                                </div>
-
-                                <button class="btn btn-primary h-10">
-                                  Apply Filters
-                                </button>
-                                <button>clear all</button>
-                              </div>
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
                             </div>
-                          </th>
-                          <th>Address/Pickup</th>
-                        </tr>
-                      </thead>
 
-                      <tbody>
-                        <tr>
-                          <td>
-                            <input type="checkbox" class="size-6" />
-                          </td>
-                          <td class="text-end">
-                            <a href="./shipment-details.html">5432</a>
-                          </td>
-                          <td>Al Jazeera Motors</td>
-                          <td>
-                            <div
-                              class="hs-dropdown [--auto-close:inside] relative inline-flex"
-                            >
-                              <button
-                                class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
-                              >
-                                RFQ
-                                <svg class="size-4 text-primary">
-                                  <use
-                                    href="./assets/images/sprite.svg#chevron-down"
-                                  ></use>
-                                </svg>
-                              </button>
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
 
-                              <div
-                                role="menu"
-                                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                              >
-                                <div class="space-y-3">
-                                  <label class="form__checkbox">
-                                    <input
-                                      type="radio"
-                                      name="status-1"
-                                      class="sm"
-                                      checked
-                                    />
-                                    <span>Shipped</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input
-                                      type="radio"
-                                      name="status-1"
-                                      class="sm"
-                                      checked
-                                    />
-                                    <span>Pending Shipping</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input
-                                      type="radio"
-                                      name="status-1"
-                                      class="sm"
-                                      checked
-                                    />
-                                    <span>Delivered</span>
-                                  </label>
-                                  <label class="form__checkbox">
-                                    <input
-                                      type="radio"
-                                      name="status-1"
-                                      class="sm"
-                                      checked
-                                    />
-                                    <span>Returned</span>
-                                  </label>
-                                </div>
-
-                                <button class="btn btn-primary h-10">
-                                  Update Status
-                                </button>
-                              </div>
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
                             </div>
-                          </td>
-                          <td>Aramex</td>
-                          <td>753951456</td>
-                          <td>19 September</td>
-                          <td>Riyadh</td>
-                          <td>26 Prince Road from King road.</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="size-6" />
+                      </td>
+                      <td class="text-end">
+                        <a href="./shipment-details.html">5432</a>
+                      </td>
+                      <td>Al Jazeera Motors</td>
+                      <td>
+                        <div
+                          class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                        >
+                          <button
+                            class="hs-dropdown-toggle text-primary bg-white rounded-full px-4 py-1 inline-flex items-center gap-2 text-sm font-semibold"
+                          >
+                            RFQ
+                            <svg class="size-4 text-primary">
+                              <use
+                                href="./assets/images/sprite.svg#chevron-down"
+                              ></use>
+                            </svg>
+                          </button>
+
+                          <div
+                            role="menu"
+                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                          >
+                            <div class="space-y-3">
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Shipped</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Pending Shipping</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Delivered</span>
+                              </label>
+                              <label class="form__checkbox">
+                                <input
+                                  type="radio"
+                                  name="status-1"
+                                  class="sm"
+                                  checked
+                                />
+                                <span>Returned</span>
+                              </label>
+                            </div>
+
+                            <button class="btn btn-primary h-10">
+                              Update Status
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aramex</td>
+                      <td>753951456</td>
+                      <td>19 September</td>
+                      <td>Riyadh</td>
+                      <td>26 Prince Road from King road.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

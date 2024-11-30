@@ -11,236 +11,234 @@
 
   <body class="site-bg">
     <div id="app">
-      <div class="flex items-start">
-        <div class="sidebar">
-          <img
-            src="./assets/images/logo-aum-sm-2.svg"
-            class="sidebar__logo"
-            alt=""
-          />
+      <div class="sidebar">
+        <img
+          src="./assets/images/logo-aum-sm-2.svg"
+          class="sidebar__logo"
+          alt=""
+        />
 
-          <nav class="space-y-2">
-            <a href="./dashboard.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#dashboard"></use>
-              </svg>
-              Dashboard
-            </a>
-            <a href="./reports.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#reports"></use>
-              </svg>
-              Reports
-            </a>
-            <a href="./orders.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#box"></use>
-              </svg>
-              Orders
-            </a>
-            <a href="./shipments.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#truck"></use>
-              </svg>
-              Shipments
-            </a>
-            <a href="./users.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#users"></use>
-              </svg>
-              Users
-            </a>
-            <a href="./products.html" aria-current="page" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#home"></use>
-              </svg>
-              Products
-            </a>
-            <a href="./logs.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#logs"></use>
-              </svg>
-              Logs
-            </a>
-          </nav>
-        </div>
+        <nav class="space-y-2">
+          <a href="./dashboard.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#dashboard"></use>
+            </svg>
+            Dashboard
+          </a>
+          <a href="./reports.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#reports"></use>
+            </svg>
+            Reports
+          </a>
+          <a href="./orders.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#box"></use>
+            </svg>
+            Orders
+          </a>
+          <a href="./shipments.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#truck"></use>
+            </svg>
+            Shipments
+          </a>
+          <a href="./users.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#users"></use>
+            </svg>
+            Users
+          </a>
+          <a href="./products.html" aria-current="page" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#home"></use>
+            </svg>
+            Products
+          </a>
+          <a href="./logs.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#logs"></use>
+            </svg>
+            Logs
+          </a>
+        </nav>
+      </div>
 
-        <div class="flex-1">
-          <div
-            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-6"
-          >
-            <p class="lg:text-3xl text-2xl font-bold">Products Catalog</p>
+      <div class="ms-64 w-[calc(100%-16rem)]">
+        <div
+          class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-6"
+        >
+          <p class="lg:text-3xl text-2xl font-bold">Products Catalog</p>
 
-            <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
+            <button
+              class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+            >
+              <svg class="size-6 text-primary">
+                <use href="./assets/images/sprite.svg#search"></use>
+              </svg>
+            </button>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
               <button
                 class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
               >
                 <svg class="size-6 text-primary">
-                  <use href="./assets/images/sprite.svg#search"></use>
+                  <use href="./assets/images/sprite.svg#user"></use>
                 </svg>
               </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                <div
+                  class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
                 >
-                  <svg class="size-6 text-primary">
+                  <svg class="size-14 text-blue">
                     <use href="./assets/images/sprite.svg#user"></use>
                   </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div
-                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
-                  >
-                    <svg class="size-14 text-blue">
-                      <use href="./assets/images/sprite.svg#user"></use>
-                    </svg>
-                  </div>
-
-                  <div class="mb-4">
-                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
-                    <p class="text-gray font-bold">name@email.com</p>
-                  </div>
-
-                  <a
-                    href="./profile.html"
-                    class="btn btn-primary h-10 w-auto mb-2"
-                    >View Profile</a
-                  >
-                  <button>Logout</button>
                 </div>
+
+                <div class="mb-4">
+                  <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                  <p class="text-gray font-bold">name@email.com</p>
+                </div>
+
+                <a
+                  href="./profile.html"
+                  class="btn btn-primary h-10 w-auto mb-2"
+                  >View Profile</a
+                >
+                <button>Logout</button>
               </div>
+            </div>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#bell"></use>
+                </svg>
+              </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
-                >
-                  <svg class="size-6 text-primary">
-                    <use href="./assets/images/sprite.svg#bell"></use>
-                  </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
+                <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
                   </div>
-
-                  <button class="block font-bold mb-2">Mark All Read</button>
-                  <a class="block font-bold" href="./notifications.html"
-                    >View All</a
-                  >
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
                 </div>
+
+                <button class="block font-bold mb-2">Mark All Read</button>
+                <a class="block font-bold" href="./notifications.html"
+                  >View All</a
+                >
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="px-12 pb-14">
-            <div class="flex items-center justify-between mb-6">
-              <div class="relative w-full max-w-md">
-                <div
-                  class="flex items-center bg-white border border-gray-100 py-4 px-6 gap-2"
-                >
-                  <button id="searchBtn" type="button" class="size-50 shrink-0">
-                    <svg class="size-6 text-primary shrink-0">
-                      <use href="./assets/images/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-                  <input
-                    id="searchInput"
-                    type="text"
-                    placeholder="Search..."
-                    class="form__input w-full"
-                  />
-                  <button type="button" class="size-5 shrink-0">
-                    <svg class="size-6 text-primary">
-                      <use href="./assets/images/sprite.svg#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <div
-                  id="searchList"
-                  class="hidden absolute top-full mt-2 inset-x-0 w-full bg-white shadow-sm p-4 lg:p-6"
-                >
-                  <p class="font-bold mb-4">6 items found</p>
-
-                  <div class="bg-gray-100 rounded-lg">
-                    <button
-                      type="button"
-                      class="appearance-none w-full text-start flex items-center gap-4 px-6 py-2"
-                    >
-                      <div class="size-10 rounded-md shrink-0">
-                        <img
-                          src="./assets/images/products/1.png"
-                          class="size-full object-cover origin-center"
-                          alt=""
-                        />
-                      </div>
-
-                      <p class="flex-1 truncate">Headlight Bulbs</p>
-
-                      <p>HLB-7789</p>
-                    </button>
-                  </div>
-                </div>
+        <div class="px-12 pb-14">
+          <div class="flex items-center justify-between mb-6">
+            <div class="relative w-full max-w-md">
+              <div
+                class="flex items-center bg-white border border-gray-100 py-4 px-6 gap-2"
+              >
+                <button id="searchBtn" type="button" class="size-50 shrink-0">
+                  <svg class="size-6 text-primary shrink-0">
+                    <use href="./assets/images/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="Search..."
+                  class="form__input w-full"
+                />
+                <button type="button" class="size-5 shrink-0">
+                  <svg class="size-6 text-primary">
+                    <use href="./assets/images/sprite.svg#plus"></use>
+                  </svg>
+                </button>
               </div>
 
-              <button
-                type="button"
-                data-hs-overlay="#add-product-modal"
-                class="btn btn-primary"
+              <div
+                id="searchList"
+                class="hidden absolute top-full mt-2 inset-x-0 w-full bg-white shadow-sm p-4 lg:p-6"
               >
-                Add Product
-              </button>
-            </div>
+                <p class="font-bold mb-4">6 items found</p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-              <button
-                type="button"
-                data-hs-overlay="#product-card-modal"
-                class="bg-gray-100 border border-white block text-start p-4"
-              >
-                <div class="bg-white mb-6">
-                  <img
-                    src="./assets/images/products/2-lg.png"
-                    class="w-full h-52 object-cover object-center"
-                    alt=""
-                  />
+                <div class="bg-gray-100 rounded-lg">
+                  <button
+                    type="button"
+                    class="appearance-none w-full text-start flex items-center gap-4 px-6 py-2"
+                  >
+                    <div class="size-10 rounded-md shrink-0">
+                      <img
+                        src="./assets/images/products/1.png"
+                        class="size-full object-cover origin-center"
+                        alt=""
+                      />
+                    </div>
+
+                    <p class="flex-1 truncate">Headlight Bulbs</p>
+
+                    <p>HLB-7789</p>
+                  </button>
                 </div>
-
-                <p class="text-lg lg:text-xl">Brake Pads</p>
-                <p class="font-bold text-gray">BRK-1234</p>
-              </button>
+              </div>
             </div>
+
+            <button
+              type="button"
+              data-hs-overlay="#add-product-modal"
+              class="btn btn-primary"
+            >
+              Add Product
+            </button>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            <button
+              type="button"
+              data-hs-overlay="#product-card-modal"
+              class="bg-gray-100 border border-white block text-start p-4"
+            >
+              <div class="bg-white mb-6">
+                <img
+                  src="./assets/images/products/2-lg.png"
+                  class="w-full h-52 object-cover object-center"
+                  alt=""
+                />
+              </div>
+
+              <p class="text-lg lg:text-xl">Brake Pads</p>
+              <p class="font-bold text-gray">BRK-1234</p>
+            </button>
           </div>
         </div>
       </div>

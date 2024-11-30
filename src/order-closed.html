@@ -32,7 +32,7 @@
               </svg>
               Reports
             </a>
-            <a href="./orders.html" aria-current="page" class="sidebar__link">
+            <a aria-current="page" href="./orders.html" class="sidebar__link">
               <svg>
                 <use href="./assets/images/sprite.svg#box"></use>
               </svg>
@@ -62,6 +62,62 @@
               </svg>
               Logs
             </a>
+
+            <div>
+              <button
+                type="button"
+                class="hs-collapse-toggle sidebar__link"
+                aria-expanded="false"
+                aria-controls="settings-collapse"
+                data-hs-collapse="#settings-collapse"
+              >
+                <svg>
+                  <use href="./assets/images/sprite.svg#settings"></use>
+                </svg>
+                Settings
+                <svg class="arrow">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div
+                id="settings-collapse"
+                class="hs-collapse w-full hidden overflow-hidden transition-[height] duration-300"
+              >
+                <ul class="space-y-2">
+                  <li>
+                    <a href="./settings.html">
+                      General
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./settings-users.html">
+                      Users
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./settings-lookups.html">
+                      Lookups
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-down"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
         </div>
 

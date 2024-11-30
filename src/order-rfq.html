@@ -11,326 +11,234 @@
 
   <body class="site-bg">
     <div id="app">
-      <div class="flex items-start">
-        <div class="sidebar">
-          <img
-            src="./assets/images/logo-aum-sm-2.svg"
-            class="sidebar__logo"
-            alt=""
-          />
+      <div class="sidebar">
+        <img
+          src="./assets/images/logo-aum-sm-2.svg"
+          class="sidebar__logo"
+          alt=""
+        />
 
-          <nav class="space-y-2">
-            <a href="./dashboard.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#dashboard"></use>
-              </svg>
-              Dashboard
-            </a>
-            <a href="./reports.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#reports"></use>
-              </svg>
-              Reports
-            </a>
-            <a href="./orders.html" aria-current="page" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#box"></use>
-              </svg>
-              Orders
-            </a>
-            <a href="./shipments.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#truck"></use>
-              </svg>
-              Shipments
-            </a>
-            <a href="./users.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#users"></use>
-              </svg>
-              Users
-            </a>
-            <a href="./products.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#home"></use>
-              </svg>
-              Products
-            </a>
-            <a href="./logs.html" class="sidebar__link">
-              <svg>
-                <use href="./assets/images/sprite.svg#logs"></use>
-              </svg>
-              Logs
-            </a>
-          </nav>
-        </div>
+        <nav class="space-y-2">
+          <a href="./dashboard.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#dashboard"></use>
+            </svg>
+            Dashboard
+          </a>
+          <a href="./reports.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#reports"></use>
+            </svg>
+            Reports
+          </a>
+          <a href="./orders.html" aria-current="page" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#box"></use>
+            </svg>
+            Orders
+          </a>
+          <a href="./shipments.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#truck"></use>
+            </svg>
+            Shipments
+          </a>
+          <a href="./users.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#users"></use>
+            </svg>
+            Users
+          </a>
+          <a href="./products.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#home"></use>
+            </svg>
+            Products
+          </a>
+          <a href="./logs.html" class="sidebar__link">
+            <svg>
+              <use href="./assets/images/sprite.svg#logs"></use>
+            </svg>
+            Logs
+          </a>
 
-        <div class="flex-1">
-          <div
-            class="sticky top-0 z-40 bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
-          >
-            <p class="lg:text-3xl text-2xl font-bold">Order Overview</p>
+          <div>
+            <button
+              type="button"
+              class="hs-collapse-toggle sidebar__link"
+              aria-expanded="false"
+              aria-controls="settings-collapse"
+              data-hs-collapse="#settings-collapse"
+            >
+              <svg>
+                <use href="./assets/images/sprite.svg#settings"></use>
+              </svg>
+              Settings
+              <svg class="arrow">
+                <use href="./assets/images/sprite.svg#chevron-down"></use>
+              </svg>
+            </button>
 
-            <div class="flex items-center gap-3">
+            <div
+              id="settings-collapse"
+              class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300"
+            >
+              <ul class="space-y-2">
+                <li>
+                  <a href="./settings.html">
+                    General
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="./settings-users.html">
+                    Users
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="./settings-lookups.html">
+                    Lookups
+                    <svg>
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="ms-64 w-[calc(100%-16rem)]">
+        <div
+          class="bg-white w-full py-6 px-12 flex items-center justify-between mb-8"
+        >
+          <p class="lg:text-3xl text-2xl font-bold">Order Overview</p>
+
+          <div class="flex items-center gap-3">
+            <button
+              class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+            >
+              <svg class="size-6 text-primary">
+                <use href="./assets/images/sprite.svg#search"></use>
+              </svg>
+            </button>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
               <button
                 class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
               >
                 <svg class="size-6 text-primary">
-                  <use href="./assets/images/sprite.svg#search"></use>
+                  <use href="./assets/images/sprite.svg#user"></use>
                 </svg>
               </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+                <div
+                  class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
                 >
-                  <svg class="size-6 text-primary">
+                  <svg class="size-14 text-blue">
                     <use href="./assets/images/sprite.svg#user"></use>
                   </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div
-                    class="size-20 bg-blue/10 inline-flex items-center justify-center rounded-full mb-3"
-                  >
-                    <svg class="size-14 text-blue">
-                      <use href="./assets/images/sprite.svg#user"></use>
-                    </svg>
-                  </div>
-
-                  <div class="mb-4">
-                    <p class="text-lg mb-0.5">Yasser Mohammed</p>
-                    <p class="text-gray font-bold">name@email.com</p>
-                  </div>
-
-                  <a
-                    href="./profile.html"
-                    class="btn btn-primary h-10 w-auto mb-2"
-                    >View Profile</a
-                  >
-                  <button>Logout</button>
                 </div>
+
+                <div class="mb-4">
+                  <p class="text-lg mb-0.5">Yasser Mohammed</p>
+                  <p class="text-gray font-bold">name@email.com</p>
+                </div>
+
+                <a
+                  href="./profile.html"
+                  class="btn btn-primary h-10 w-auto mb-2"
+                  >View Profile</a
+                >
+                <button>Logout</button>
               </div>
+            </div>
+
+            <div
+              class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+            >
+              <button
+                class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
+              >
+                <svg class="size-6 text-primary">
+                  <use href="./assets/images/sprite.svg#bell"></use>
+                </svg>
+              </button>
 
               <div
-                class="hs-dropdown [--auto-close:inside] relative inline-flex justify-start [--placement:bottom-right]"
+                class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
               >
-                <button
-                  class="hs-dropdown-toggle size-12 bg-gray/10 hover:bg-gray/20 transition-colors rounded-full inline-flex items-center justify-center"
-                >
-                  <svg class="size-6 text-primary">
-                    <use href="./assets/images/sprite.svg#bell"></use>
-                  </svg>
-                </button>
-
-                <div
-                  class="hs-dropdown-menu w-full max-w-[300px] transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                >
-                  <div class="divide-y divide-gray/25 space-y-4 mb-4">
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
-                    <div class="pt-4 first:pt-0">
-                      <p>
-                        Payment for invoice #56789 has been successfully
-                        received. Thank you for your purchase!
-                      </p>
-                      <p class="text-sm text-gray">Just Now</p>
-                    </div>
+                <div class="divide-y divide-gray/25 space-y-4 mb-4">
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
                   </div>
-
-                  <button class="block font-bold mb-2">Mark All Read</button>
-                  <a class="block font-bold" href="./notifications.html"
-                    >View All</a
-                  >
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
+                  <div class="pt-4 first:pt-0">
+                    <p>
+                      Payment for invoice #56789 has been successfully received.
+                      Thank you for your purchase!
+                    </p>
+                    <p class="text-sm text-gray">Just Now</p>
+                  </div>
                 </div>
+
+                <button class="block font-bold mb-2">Mark All Read</button>
+                <a class="block font-bold" href="./notifications.html"
+                  >View All</a
+                >
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="px-10 pb-14 space-y-6">
-            <div class="flex flex-col lg:flex-row gap-6">
+        <div class="px-10 pb-14 space-y-6">
+          <div class="flex flex-col lg:flex-row gap-6">
+            <div
+              class="box-gradient border border-white flex-1 flex flex-col p-6 lg:p-10"
+            >
+              <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                Business Information
+              </p>
+
               <div
-                class="box-gradient border border-white flex-1 flex flex-col p-6 lg:p-10"
+                class="flex-1 flex flex-col justify-between items-start gap-8"
               >
-                <p class="text-lg lg:text-xl font-bold uppercase mb-6">
-                  Business Information
-                </p>
-
-                <div
-                  class="flex-1 flex flex-col justify-between items-start gap-8"
-                >
-                  <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                      <div
-                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
-                      >
-                        <svg class="size-6 text-primary">
-                          <use href="./assets/images/sprite.svg#home"></use>
-                        </svg>
-                      </div>
-
-                      <div class="flex-1">
-                        <p class="text-gray text-sm font-semibold">
-                          Business Name
-                        </p>
-                        <p class="text-lg">Al Jazeera Motors</p>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                      <div
-                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
-                      >
-                        <svg class="size-6 text-primary">
-                          <use href="./assets/images/sprite.svg#phone"></use>
-                        </svg>
-                      </div>
-
-                      <div class="flex-1">
-                        <p class="text-gray text-sm font-semibold">Phone</p>
-                        <p class="text-lg">055-1234567</p>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                      <div
-                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
-                      >
-                        <svg class="size-6 text-primary">
-                          <use
-                            href="./assets/images/sprite.svg#buildings"
-                          ></use>
-                        </svg>
-                      </div>
-
-                      <div class="flex-1">
-                        <p class="text-gray text-sm font-semibold">City</p>
-                        <p class="text-lg">Riyadh</p>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                      <div
-                        class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
-                      >
-                        <svg class="size-6 text-primary">
-                          <use href="./assets/images/sprite.svg#map-pin"></use>
-                        </svg>
-                      </div>
-
-                      <div class="flex-1">
-                        <p class="text-gray text-sm font-semibold">
-                          Shipping Address
-                        </p>
-                        <p class="text-lg">Side st. form Main st.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button
-                    type="button"
-                    data-hs-overlay="#edit-details-modal"
-                    class="btn btn-gost font-bold h-auto px-0 mt-auto"
-                  >
-                    View All Details
-                  </button>
-                </div>
-              </div>
-
-              <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
-                <div class="flex items-center gap-3 mb-6">
-                  <p class="text-lg lg:text-xl font-bold uppercase">
-                    Order Details
-                  </p>
-
-                  <div
-                    class="hs-dropdown [--auto-close:inside] relative inline-flex"
-                  >
-                    <button
-                      class="hs-dropdown-toggle text-primary bg-white rounded-full px-10 py-2 inline-flex items-center gap-2 text-sm font-semibold"
-                    >
-                      RFQ
-                      <svg class="size-4 text-primary">
-                        <use
-                          href="./assets/images/sprite.svg#chevron-down"
-                        ></use>
-                      </svg>
-                    </button>
-
-                    <div
-                      role="menu"
-                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
-                    >
-                      <div class="space-y-3">
-                        <label class="form__checkbox">
-                          <input
-                            type="radio"
-                            name="status-1"
-                            class="sm"
-                            checked
-                          />
-                          <span>RFQ</span>
-                        </label>
-                        <label class="form__checkbox">
-                          <input type="radio" name="status-1" class="sm" />
-                          <span>Pending Approval</span>
-                        </label>
-                        <label class="form__checkbox">
-                          <input type="radio" name="status-1" class="sm" />
-                          <span>Pending Payment</span>
-                        </label>
-                        <label class="form__checkbox">
-                          <input type="radio" name="status-1" class="sm" />
-                          <span>Processing</span>
-                        </label>
-                        <label class="form__checkbox">
-                          <input type="radio" name="status-1" class="sm" />
-                          <span>Closed</span>
-                        </label>
-                        <label class="form__checkbox">
-                          <input type="radio" name="status-1" class="sm" />
-                          <span>Canceled</span>
-                        </label>
-                      </div>
-
-                      <button class="btn btn-primary h-10">
-                        Update Status
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="space-y-6">
                   <div class="flex items-center gap-4">
                     <div
                       class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
                     >
                       <svg class="size-6 text-primary">
-                        <use href="./assets/images/sprite.svg#money"></use>
+                        <use href="./assets/images/sprite.svg#home"></use>
                       </svg>
                     </div>
 
                     <div class="flex-1">
                       <p class="text-gray text-sm font-semibold">
-                        Payment Type
+                        Business Name
                       </p>
-                      <p class="text-lg">Cash</p>
+                      <p class="text-lg">Al Jazeera Motors</p>
                     </div>
                   </div>
 
@@ -339,15 +247,13 @@
                       class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
                     >
                       <svg class="size-6 text-primary">
-                        <use href="./assets/images/sprite.svg#carrier"></use>
+                        <use href="./assets/images/sprite.svg#phone"></use>
                       </svg>
                     </div>
 
                     <div class="flex-1">
-                      <p class="text-gray text-sm font-semibold">
-                        Receiving by
-                      </p>
-                      <p class="text-lg">Delivery</p>
+                      <p class="text-gray text-sm font-semibold">Phone</p>
+                      <p class="text-lg">055-1234567</p>
                     </div>
                   </div>
 
@@ -383,247 +289,1118 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
-                <p class="text-lg lg:text-xl font-bold uppercase mb-6">
-                  Shipping Details
-                </p>
-
-                <p class="text-lg text-gray">Not shipped yet...</p>
+                <button
+                  type="button"
+                  data-hs-overlay="#edit-details-modal"
+                  class="btn btn-gost font-bold h-auto px-0 mt-auto"
+                >
+                  View All Details
+                </button>
               </div>
             </div>
 
-            <div class="flex flex-col">
-              <div class="overflow-x-auto">
-                <div class="min-w-full inline-block align-middle">
-                  <div class="overflow-hidden">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <button>
-                              <svg>
-                                <use
-                                  href="./assets/images/sprite.svg#reverse"
-                                ></use>
-                              </svg>
+            <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
+              <div class="flex items-center gap-3 mb-6">
+                <p class="text-lg lg:text-xl font-bold uppercase">
+                  Order Details
+                </p>
 
-                              Item
-                            </button>
-                          </th>
-                          <th>Part #</th>
-                          <th>Qty.</th>
-                          <th>Availability</th>
-                          <th>Quantity</th>
-                          <th>Price</th>
-                          <th>Discount</th>
-                          <th>Total</th>
-                          <th></th>
-                        </tr>
-                      </thead>
+                <div
+                  class="hs-dropdown [--auto-close:inside] relative inline-flex"
+                >
+                  <button
+                    class="hs-dropdown-toggle text-primary bg-white rounded-full px-10 py-2 inline-flex items-center gap-2 text-sm font-semibold"
+                  >
+                    RFQ
+                    <svg class="size-4 text-primary">
+                      <use href="./assets/images/sprite.svg#chevron-down"></use>
+                    </svg>
+                  </button>
 
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img
-                                src="./assets/images/products/1.png"
-                                class="size-10 shrink-0"
-                                alt=""
-                              />
-                              Headlight Bulbs
-                            </div>
-                          </td>
-                          <td>HLB-7789</td>
-                          <td>35</td>
-                          <td class="text-gray">
-                            <select
-                              name=""
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                              id=""
-                            >
-                              <option value="">Availability</option>
-                            </select>
-                          </td>
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Quantity"
-                              />
-                            </div>
-                          </td>
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Price"
-                              />
-                              Riyal
-                            </div>
-                          </td>
+                  <div
+                    role="menu"
+                    class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md"
+                  >
+                    <div class="space-y-3">
+                      <label class="form__checkbox">
+                        <input
+                          type="radio"
+                          name="status-1"
+                          class="sm"
+                          checked
+                        />
+                        <span>RFQ</span>
+                      </label>
+                      <label class="form__checkbox">
+                        <input type="radio" name="status-1" class="sm" />
+                        <span>Pending Approval</span>
+                      </label>
+                      <label class="form__checkbox">
+                        <input type="radio" name="status-1" class="sm" />
+                        <span>Pending Payment</span>
+                      </label>
+                      <label class="form__checkbox">
+                        <input type="radio" name="status-1" class="sm" />
+                        <span>Processing</span>
+                      </label>
+                      <label class="form__checkbox">
+                        <input type="radio" name="status-1" class="sm" />
+                        <span>Closed</span>
+                      </label>
+                      <label class="form__checkbox">
+                        <input type="radio" name="status-1" class="sm" />
+                        <span>Canceled</span>
+                      </label>
+                    </div>
 
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Discount"
-                              />
-                              %
-                            </div>
-                          </td>
-                          <td class="text-gray">
-                            <div class="flex items-center gap-2 p-2 w-40">
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Enter price..."
-                              />
-                            </div>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-6">
-                              <button type="button">
-                                <svg class="size-6 text-primary">
-                                  <use
-                                    href="./assets/images/sprite.svg#copy"
-                                  ></use>
-                                </svg>
-                              </button>
-                              <button type="button">
-                                <svg class="size-6 text-primary">
-                                  <use
-                                    href="./assets/images/sprite.svg#x"
-                                  ></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img
-                                src="./assets/images/products/1.png"
-                                class="size-10 shrink-0"
-                                alt=""
-                              />
-                              Headlight Bulbs
-                            </div>
-                          </td>
-                          <td>HLB-7789</td>
-                          <td>35</td>
-                          <td class="text-gray">
-                            <select
-                              name=""
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                              id=""
-                            >
-                              <option value="">Availability</option>
-                            </select>
-                          </td>
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Quantity"
-                              />
-                            </div>
-                          </td>
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Price"
-                              />
-                              Riyal
-                            </div>
-                          </td>
+                    <button class="btn btn-primary h-10">Update Status</button>
+                  </div>
+                </div>
+              </div>
 
-                          <td class="text-gray">
-                            <div
-                              class="flex items-center gap-2 bg-white p-2 w-40"
-                            >
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Discount"
-                              />
-                              %
-                            </div>
-                          </td>
-                          <td class="text-gray">
-                            <div class="flex items-center gap-2 p-2 w-40">
-                              <input
-                                type="text"
-                                class="w-full appearance-none bg-transparent outline-none"
-                                placeholder="Enter price..."
-                              />
-                            </div>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-6">
-                              <button type="button">
-                                <svg class="size-6 text-primary">
-                                  <use
-                                    href="./assets/images/sprite.svg#copy"
-                                  ></use>
-                                </svg>
-                              </button>
-                              <button type="button">
-                                <svg class="size-6 text-primary">
-                                  <use
-                                    href="./assets/images/sprite.svg#x"
-                                  ></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                  >
+                    <svg class="size-6 text-primary">
+                      <use href="./assets/images/sprite.svg#money"></use>
+                    </svg>
+                  </div>
+
+                  <div class="flex-1">
+                    <p class="text-gray text-sm font-semibold">Payment Type</p>
+                    <p class="text-lg">Cash</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                  >
+                    <svg class="size-6 text-primary">
+                      <use href="./assets/images/sprite.svg#carrier"></use>
+                    </svg>
+                  </div>
+
+                  <div class="flex-1">
+                    <p class="text-gray text-sm font-semibold">Receiving by</p>
+                    <p class="text-lg">Delivery</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                  >
+                    <svg class="size-6 text-primary">
+                      <use href="./assets/images/sprite.svg#buildings"></use>
+                    </svg>
+                  </div>
+
+                  <div class="flex-1">
+                    <p class="text-gray text-sm font-semibold">City</p>
+                    <p class="text-lg">Riyadh</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-12 border border-gray/15 rounded-md inline-flex items-center justify-center shrink-0"
+                  >
+                    <svg class="size-6 text-primary">
+                      <use href="./assets/images/sprite.svg#map-pin"></use>
+                    </svg>
+                  </div>
+
+                  <div class="flex-1">
+                    <p class="text-gray text-sm font-semibold">
+                      Shipping Address
+                    </p>
+                    <p class="text-lg">Side st. form Main st.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="flex flex-col lg:items-center lg:flex-row gap-4">
-              <button
-                type="button"
-                data-hs-overlay="#add-items-modal"
-                class="btn btn-grey"
-              >
-                Add Items
-              </button>
-
-              <p class="lg:ms-auto">
-                <span>Total Quote:</span>
-                <strong>15,680 Riyal</strong>
+            <div class="box-gradient border border-white flex-1 p-6 lg:p-10">
+              <p class="text-lg lg:text-xl font-bold uppercase mb-6">
+                Shipping Details
               </p>
-              <button
-                type="button"
-                data-hs-overlay="#send-quote-modal"
-                class="btn btn-primary"
-              >
-                Send Quote
-              </button>
+
+              <p class="text-lg text-gray">Not shipped yet...</p>
             </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div class="overflow-x-auto h-96">
+              <div class="min-w-full inline-block align-middle">
+                <!-- <div class="overflow-hidden"></div> -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="sticky top-0">
+                        <button>
+                          <svg>
+                            <use
+                              href="./assets/images/sprite.svg#reverse"
+                            ></use>
+                          </svg>
+
+                          Item
+                        </button>
+                      </th>
+                      <th class="sticky top-0">Part #</th>
+                      <th class="sticky top-0">Qty.</th>
+                      <th class="sticky top-0">Availability</th>
+                      <th class="sticky top-0">Quantity</th>
+                      <th class="sticky top-0">Price</th>
+                      <th class="sticky top-0">Discount</th>
+                      <th class="sticky top-0">Total</th>
+                      <th class="sticky top-0"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./assets/images/products/1.png"
+                            class="size-10 shrink-0"
+                            alt=""
+                          />
+                          Headlight Bulbs
+                        </div>
+                      </td>
+                      <td>HLB-7789</td>
+                      <td>35</td>
+                      <td class="text-gray">
+                        <select
+                          name=""
+                          class="flex items-center gap-2 bg-white p-2 w-40"
+                          id=""
+                        >
+                          <option value="">Availability</option>
+                        </select>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Quantity"
+                          />
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Price"
+                          />
+                          Riyal
+                        </div>
+                      </td>
+
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 bg-white p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Discount"
+                          />
+                          %
+                        </div>
+                      </td>
+                      <td class="text-gray">
+                        <div class="flex items-center gap-2 p-2 w-40">
+                          <input
+                            type="text"
+                            class="w-full appearance-none bg-transparent outline-none"
+                            placeholder="Enter price..."
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-6">
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#copy"></use>
+                            </svg>
+                          </button>
+                          <button type="button">
+                            <svg class="size-6 text-primary">
+                              <use href="./assets/images/sprite.svg#x"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:items-center lg:flex-row gap-4">
+            <button
+              type="button"
+              data-hs-overlay="#add-items-modal"
+              class="btn btn-grey"
+            >
+              Add Items
+            </button>
+
+            <p class="lg:ms-auto">
+              <span>Total Quote:</span>
+              <strong>15,680 Riyal</strong>
+            </p>
+            <button
+              type="button"
+              data-hs-overlay="#send-quote-modal"
+              class="btn btn-primary"
+            >
+              Send Quote
+            </button>
           </div>
         </div>
       </div>
